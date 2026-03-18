@@ -1,0 +1,18 @@
+# macOS
+.DS_Store
+
+# IDE
+.idea/
+
+# Generated files
+*.png
+*.jpg
+*.jpeg
+*.log
+response.json
+scripts/gen/
+scripts/logs/
+scripts/reference_images/*.jpg
+scripts/reference_images/*.png
+__pycache__/
+scripts/.idea/
