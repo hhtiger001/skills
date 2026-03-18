@@ -1,12 +1,2 @@
-# macOS
-.DS_Store
-
-# IDE
-.idea/
-
-# Generated files
-*.png
-*.jpg
-*.jpeg
-*.log
-response.json
+# Output directories
+scripts/output_*/
