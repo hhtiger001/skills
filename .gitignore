@@ -1,2 +1,19 @@
-# Output directories
+# macOS
+.DS_Store
+
+# IDE
+.idea/
+
+# Generated files
+*.png
+*.jpg
+*.jpeg
+*.log
+response.json
+
+# Scripts output
+scripts/gen/
+scripts/logs/
+scripts/reference_images/
 scripts/output_*/
+__pycache__/
