@@ -1,0 +1,113 @@
+2026-03-18 21:18:03,017 - 请求 | PROMPT: 一只巨大的黄色老虎，威严站立，写实风格... | 图片: 0张 | 输出: 默认
+2026-03-18 21:18:13,792 - 请求 | PROMPT: 一只巨大的黄色老虎，威严站立，写实风格... | 图片: 0张 | 输出: 默认
+2026-03-18 21:18:13,792 - 请求 → https://api.tu-zi.com/v1/chat/completions
+2026-03-18 21:18:13,792 - 请求头 → {'Authorization': 'Bearer sk-DjoaOxDvcJIbWg0yanmrTSHilaKsrcwbkxmNArWIkq9FW1ec', 'Content-Type': 'application/json'}
+2026-03-18 21:18:13,792 - 请求体 → {"model": "gemini-3-pro-image-preview-2k", "messages": [{"role": "user", "content": [{"type": "text", "text": "一只巨大的黄色老虎，威严站立，写实风格"}]}]}...
+2026-03-18 21:18:46,608 - 响应状态 → 200
+2026-03-18 21:18:46,610 - 响应体 → {"id":"chatcmpl-fee24d2a93ce479aa6b46f4371b891f2","model":"gemini-3-pro-image-preview-2k","object":"chat.completion","created":1773839924,"choices":[{"index":0,"message":{"role":"assistant","content":"![image](https://apioss15.sydney-ai.com/img/114/t9il_0UNjpQmjxMqjxQAjx1lfx1m10kNt7TgYsFuksWxtvFN1aQljpMm1xkm1pQq10knX5oI1rbz_026jaQrXp1q1pwV1xkAfa_uYxMTXvXw1pMytIbI/g3pip2k-1773839926297-f254cd32.jpg)"},"finish_reason":"stop"}],"usage":{"prompt_tokens":14,"completion_tokens":1226,"total_tokens":142...
+2026-03-18 21:18:49,606 - 完成 | 输出: 
+2026-03-18 21:26:19,409 - 请求 | PROMPT: 一只巨大的黄色老虎，威严站立，写实风格... | 图片: 0张 | 输出: 默认
+2026-03-18 21:26:19,409 - 请求 → https://api.tu-zi.com/v1/chat/completions
+2026-03-18 21:26:19,409 - 请求头 → {'Authorization': 'Bearer sk-DjoaOxDvcJIbWg0yanmrTSHilaKsrcwbkxmNArWIkq9FW1ec', 'Content-Type': 'application/json'}
+2026-03-18 21:26:19,409 - 请求体 → {"model": "gemini-3-pro-image-preview-2k", "messages": [{"role": "user", "content": [{"type": "text", "text": "一只巨大的黄色老虎，威严站立，写实风格"}]}]}...
+2026-03-18 21:26:56,416 - 响应状态 → 200
+2026-03-18 21:26:56,418 - 响应体 → {"id":"chatcmpl-f958df2aaf58416fa737742a747e102b","model":"gemini-3-pro-image-preview-2k","object":"chat.completion","created":1773840415,"choices":[{"index":0,"message":{"role":"assistant","content":"![image](https://apioss1.sydney-ai.com/img/106/t9il_0UNjpQmjxFqjxQAjxQnfx1m10kNt7TgYsFuksWxtvFN1a3sjpMm1xkm1pQq10kAX5oI1rbz_026jaQrXp1qX03l1akAX0wuka-lXvW4X0-ytIbI/g3pip2k-1773840416249-a444ab44.jpg)"},"finish_reason":"stop"}],"usage":{"prompt_tokens":14,"completion_tokens":1209,"total_tokens":1399...
+2026-03-18 21:27:37,988 - 请求 | PROMPT: 一只巨大的黄色老虎，威严站立，写实风格... | 图片: 0张 | 输出: 默认
+2026-03-18 21:27:37,989 - 请求 → https://api.tu-zi.com/v1/chat/completions
+2026-03-18 21:27:37,989 - 请求头 → {'Authorization': 'Bearer sk-DjoaOxDvcJIbWg0yanmrTSHilaKsrcwbkxmNArWIkq9FW1ec', 'Content-Type': 'application/json'}
+2026-03-18 21:27:37,989 - 请求体 → {"model": "gemini-3-pro-image-preview-2k", "messages": [{"role": "user", "content": [{"type": "text", "text": "一只巨大的黄色老虎，威严站立，写实风格"}]}]}...
+2026-03-18 21:28:17,500 - 响应状态 → 200
+2026-03-18 21:28:17,501 - 响应体 → {"id":"chatcmpl-62cf2291e9d34040b063bd3014460760","model":"gemini-3-pro-image-preview-2k","object":"chat.completion","created":1773840496,"choices":[{"index":0,"message":{"role":"assistant","content":"![image](https://apioss1.sydney-ai.com/img/106/t9il_0UNjpQmjxFqjxQAjxQnfx1m10kNt7TgYsFuksWxtvFN1a3sjpMm1xkm1pQq10kAX5oI1rbz_026jaQrXp1qX03lfa_p101uXpeLXakqf0hytIbI/g3pip2k-1773840497303-77e56888.jpg)"},"finish_reason":"stop"}],"usage":{"prompt_tokens":14,"completion_tokens":1214,"total_tokens":1466...
+2026-03-18 21:28:20,293 - 下载成功: url_1.png
+2026-03-18 21:28:20,300 - 已保存到 reference_images: gen_002.png
+2026-03-18 21:28:20,300 - 完成 | 输出: gen_002.png
+2026-03-18 22:58:17,803 - 请求 | PROMPT: 一只巨大的黄色老虎，威严站立，写实风格... | 图片: 0张 | 输出: 默认
+2026-03-18 22:58:17,803 - 请求 → https://api.tu-zi.com/v1/chat/completions
+2026-03-18 22:58:17,803 - 请求头 → {'Authorization': 'Bearer sk-DjoaOxDvcJ...', 'Content-Type': 'application/json'}
+2026-03-18 22:58:17,803 - 请求体 → {"model": "gpt-4o-image", "messages": [{"role": "user", "content": [{"type": "text", "text": "一只巨大的黄色老虎，威严站立，写实风格"}]}]}...
+2026-03-18 22:58:52,909 - 响应状态 → 200
+2026-03-18 22:58:52,910 - 响应体 → {"id":"chatcmpl-89D9ri2yGqXBiZa7SPsKcXQgFLv2A","model":"gpt-4o-image","object":"chat.completion","created":1773845932,"choices":[{"index":0,"message":{"role":"assistant","content":"```json\n{\n  \"prompt\": \"一只巨大的黄色老虎，威严站立，写实风格\",\n  \"ratio\": \"1:1\",\n  \"n\": 1\n}\n```\n\n\u003e ID: `a8777a9e-5236-4e2f-aad9-bd7d93f81afe`\n\u003e[数据预览](https://pro.asyncdata.net/web/a8777a9e-5236-4e2f-aad9-bd7d93f81afe) | [原始数据](https://pro.asyncdata.net/source/a8777a9e-5236-4e2f-aad9-bd7d93f81afe)\n\n\u003e🕐...
+2026-03-18 22:58:59,065 - 下载成功: url_1.png
+2026-03-18 22:59:01,727 - 下载成功: url_2.png
+2026-03-18 22:59:01,732 - 已保存: gen_001.png
+2026-03-18 22:59:01,736 - 已保存: gen_002.png
+2026-03-18 22:59:01,736 - 完成 | 输出: gen_001.png, gen_002.png
+2026-03-18 22:59:01,737 - 正在上传图片到飞书...
+2026-03-18 22:59:01,924 - 获取飞书 token 成功
+2026-03-18 22:59:05,471 - 上传图片到飞书成功: img_v3_02vt_3833f3f8-8203-421b-8d36-1192d729de3g
+2026-03-18 22:59:06,068 - 发送图片到飞书成功: om_x100b549f95537ca8b215af0f21ce761
+2026-03-18 22:59:06,071 - 已发送到飞书群: om_x100b549f95537ca8b215af0f21ce761
+2026-03-19 00:04:48,962 - 请求 | PROMPT: A majestic 3D digital artwork of a mythical chimerical creature — the upper body of a powerful Benga... | 图片: 2张 | 输出: tiger_xuanwu_001
+2026-03-19 00:05:28,893 - 请求 | PROMPT: A majestic 3D digital artwork of a mythical chimerical creature — the upper body of a powerful Benga... | 图片: 2张 | 输出: tiger_xuanwu_001
+2026-03-19 00:05:28,894 - 请求 → https://api.tu-zi.com/v1/chat/completions
+2026-03-19 00:05:28,894 - 请求头 → {'Authorization': 'Bearer sk-DjoaOxDvcJ...', 'Content-Type': 'application/json'}
+2026-03-19 00:05:28,895 - 请求体 → {"model": "nano-banana", "messages": [{"role": "user", "content": [{"type": "text", "text": "A majestic 3D digital artwork of a mythical chimerical creature — the upper body of a powerful Bengal tiger with fierce eyes, orange fur, and iconic black stripes; the lower body of an ancient turtle with a massive dark jade shell covered in intricate ancient patterns; a serpent coiling gracefully around the turtle shell. The creature stands on a rocky ocean outcrop, mist swirling around, dramatic golden...
+2026-03-19 00:07:27,481 - 响应状态 → 200
+2026-03-19 00:07:27,482 - 响应体 → {"id":"chatcmpl-20260318090535264809579lfHQqEB7","model":"gemini-2.5-flash-image","object":"chat.completion","created":1773850046,"choices":[{"index":0,"message":{"role":"assistant","content":"Here's your majestic chimerical creature: \n![image](https://apioss.sydney-ai.com/img/119/t9il_0UNjpQmjxMqjxQAjx1lfx1m10kNt7TgYsFuksWxtvFN1aQVjpMm1xkm1pQq10wmX5oI1xJ8t7TgYsFu1a_r1phT103lXp3s15Txk7-lkp1lX4VmR8_=/g25fimage-1773850047061-cad4c346.png)"},"finish_reason":"stop"}],"usage":{"prompt_tokens":615,"c...
+2026-03-19 00:07:48,314 - 请求 | PROMPT: A majestic 3D digital artwork of a mythical chimerical creature — the upper body of a powerful Benga... | 图片: 2张 | 输出: tiger_xuanwu_001
+2026-03-19 00:07:48,315 - 请求 → https://api.tu-zi.com/v1/chat/completions
+2026-03-19 00:07:48,315 - 请求头 → {'Authorization': 'Bearer sk-DjoaOxDvcJ...', 'Content-Type': 'application/json'}
+2026-03-19 00:07:48,316 - 请求体 → {"model": "nano-banana", "messages": [{"role": "user", "content": [{"type": "text", "text": "A majestic 3D digital artwork of a mythical chimerical creature — the upper body of a powerful Bengal tiger with fierce eyes, orange fur, and iconic black stripes; the lower body of an ancient turtle with a massive dark jade shell covered in intricate ancient patterns; a serpent coiling gracefully around the turtle shell. The creature stands on a rocky ocean outcrop, mist swirling around, dramatic golden...
+2026-03-19 00:08:00,763 - 响应状态 → 200
+2026-03-19 00:08:00,764 - 响应体 → {"id":"chatcmpl-20260318090751755086480oBqSFp0","model":"gemini-2.5-flash-image","object":"chat.completion","created":1773850080,"choices":[{"index":0,"message":{"role":"assistant","content":"![image](https://apioss16.sydney-ai.com/img/72/t9il_0UNjpQmjxFsjxQAjxkrfx1m10kNt7TgYsFuksWxtvFNXpMN1x3AXx3p1ahmfa3Tjs_AX7YzR7WIY5lnXp_pf0Fm10hmXxwmj7-s1ahqXsMsjIbyYm==/g25fimage-1773850080690-d61887b6.png)"},"finish_reason":"stop"}],"usage":{"prompt_tokens":615,"completion_tokens":1290,"total_tokens":1905,"...
+2026-03-19 00:08:04,610 - 下载成功: tiger_xuanwu_001.png
+2026-03-19 00:08:04,624 - 已保存: tiger_xuanwu_001.png
+2026-03-19 00:08:04,625 - 完成 | 输出: tiger_xuanwu_001.png
+2026-03-19 00:08:04,625 - 正在上传图片到飞书...
+2026-03-19 00:08:04,802 - 获取飞书 token 成功
+2026-03-19 00:08:08,027 - 上传图片到飞书成功: img_v3_02vu_e5de2500-2e84-4ef3-bcdc-e66855b3610g
+2026-03-19 00:08:08,535 - 发送图片到飞书成功: om_x100b54989045c0a8b314531e21df9a6
+2026-03-19 00:08:08,537 - 已发送到飞书: tiger_xuanwu_001.png (msg_id: om_x100b54989045c0a8b314531e21df9a6)
+2026-03-19 00:53:34,961 - 请求 | PROMPT: A majestic 3D digital artwork of a mythical scene — a powerful Bengal tiger with fierce eyes, orange... | 图片: 2张 | 输出: tiger_on_xuanwu_001
+2026-03-19 00:53:34,962 - 请求 → https://api.tu-zi.com/v1/chat/completions
+2026-03-19 00:53:34,962 - 请求头 → {'Authorization': 'Bearer sk-DjoaOxDvcJ...', 'Content-Type': 'application/json'}
+2026-03-19 00:53:34,963 - 请求体 → {"model": "nano-banana", "messages": [{"role": "user", "content": [{"type": "text", "text": "A majestic 3D digital artwork of a mythical scene — a powerful Bengal tiger with fierce eyes, orange fur, and iconic black stripes riding on the back of a massive Xuanwu (mystical turtle-snake creature). The Xuanwu has a tiger head instead of a dragon/snake head, dark jade shell with ancient patterns, coiling serpent body. The tiger sits triumphantly on top, both creatures facing forward. Dramatic mounta...
+2026-03-19 00:56:51,181 - 请求 | PROMPT: A majestic 3D digital artwork of a mythical scene — a powerful Bengal tiger with fierce eyes, orange... | 图片: 2张 | 输出: tiger_on_xuanwu_001
+2026-03-19 00:56:51,182 - 请求 → https://api.tu-zi.com/v1/chat/completions
+2026-03-19 00:56:51,182 - 请求头 → {'Authorization': 'Bearer sk-DjoaOxDvcJ...', 'Content-Type': 'application/json'}
+2026-03-19 00:56:51,183 - 请求体 → {"model": "nano-banana", "messages": [{"role": "user", "content": [{"type": "text", "text": "A majestic 3D digital artwork of a mythical scene — a powerful Bengal tiger with fierce eyes, orange fur, and iconic black stripes riding on the back of a massive Xuanwu (mystical turtle-snake creature). The Xuanwu has a tiger head instead of a dragon/snake head, dark jade shell with ancient patterns, coiling serpent body. The tiger sits triumphantly on top, both creatures facing forward. Dramatic mounta...
+2026-03-19 00:57:26,420 - 响应状态 → 200
+2026-03-19 00:57:26,422 - 响应体 → {"id":"chatcmpl-2026031809565256274017201XtD1Re","model":"gemini-2.5-flash-image","object":"chat.completion","created":1773853045,"choices":[{"index":0,"message":{"role":"assistant","content":"![image](https://apioss1.sydney-ai.com/img/72/t9il_0UNjpQmjxMqjxQAjx1lfx1m10kNt7TgYsFuksWxtvFNXpMN1x3AXx3p1ahmfaFTjs_AX7YzR7WIY5lnXp_pf0Fp10-s1aQqjaLg17W8Xp3AjIbyYm==/g25fimage-1773853046118-9a1af702.png)"},"finish_reason":"stop"}],"usage":{"prompt_tokens":632,"completion_tokens":1290,"total_tokens":1922,"...
+2026-03-19 00:57:30,884 - 下载成功: tiger_on_xuanwu_001.png
+2026-03-19 00:58:55,163 - 请求 | PROMPT: A majestic 3D digital artwork of a mythical scene — a powerful Bengal tiger with fierce eyes, orange... | 图片: 2张 | 输出: tiger_on_xuanwu_001
+2026-03-19 00:58:55,164 - 请求 → https://api.tu-zi.com/v1/chat/completions
+2026-03-19 00:58:55,164 - 请求头 → {'Authorization': 'Bearer sk-DjoaOxDvcJ...', 'Content-Type': 'application/json'}
+2026-03-19 00:58:55,164 - 请求体 → {"model": "nano-banana", "messages": [{"role": "user", "content": [{"type": "text", "text": "A majestic 3D digital artwork of a mythical scene — a powerful Bengal tiger with fierce eyes, orange fur, and iconic black stripes riding on the back of a massive Xuanwu (mystical turtle-snake creature). The Xuanwu has a tiger head instead of a dragon/snake head, dark jade shell with ancient patterns, coiling serpent body. The tiger sits triumphantly on top, both creatures facing forward. Dramatic mounta...
+2026-03-19 00:59:07,919 - 响应状态 → 200
+2026-03-19 00:59:07,920 - 响应体 → {"id":"chatcmpl-2b849d5f4b53bcae04b3d7b1d0d1d335","model":"gemini-2.5-flash-image","object":"chat.completion","created":1773853147,"choices":[{"index":0,"message":{"role":"assistant","content":"![Image](https://apioss.sydney-ai.com/img/20/t9il_91djAom_8ByY8LCYDXV_riLR5VptDiLjsXwR4BA10Ms101nf5Bqf0hnYaYxXAlT1a_qja-mY0Quf0LL1AlnYvJ4Yai810WgfaQy_vVI/8881e6c7-5178-40d1-89e3-1debe4f01a91.png)"},"finish_reason":"stop"}],"usage":{"prompt_tokens":1180,"completion_tokens":67,"total_tokens":1247,"prompt_to...
+2026-03-19 00:59:10,743 - 下载成功: tiger_on_xuanwu_001.png
+2026-03-19 00:59:10,754 - 已保存: tiger_on_xuanwu_001.png
+2026-03-19 00:59:10,754 - 完成 | 输出: tiger_on_xuanwu_001.png
+2026-03-19 00:59:10,754 - 正在上传图片到飞书...
+2026-03-19 00:59:11,302 - 获取飞书 token 成功
+2026-03-19 00:59:14,574 - 上传图片到飞书成功: img_v3_02vu_5d5bb1fa-d373-4322-8509-01be154740fg
+2026-03-19 00:59:15,122 - 发送图片到飞书成功: om_x100b5499d0fd58a0b29132e2eac2b9b
+2026-03-19 00:59:15,124 - 已发送到飞书: tiger_on_xuanwu_001.png (msg_id: om_x100b5499d0fd58a0b29132e2eac2b9b)
+2026-03-19 01:14:11,074 - 请求 | PROMPT: 人身虎头，保持原图的神态和氛围，上半身人形，下半身保持老虎形态，或者完全人形但拥有老虎头部，整体逼真，构图完整... | 图片: 1张 | 输出: tiger_human_001
+2026-03-19 01:14:11,075 - 请求 → https://api.tu-zi.com/v1/chat/completions
+2026-03-19 01:14:11,075 - 请求头 → {'Authorization': 'Bearer sk-DjoaOxDvcJ...', 'Content-Type': 'application/json'}
+2026-03-19 01:14:11,076 - 请求体 → {"model": "gpt-4o-image", "messages": [{"role": "user", "content": [{"type": "text", "text": "人身虎头，保持原图的神态和氛围，上半身人形，下半身保持老虎形态，或者完全人形但拥有老虎头部，整体逼真，构图完整"}, {"type": "image_url", "image_url": {"url": "data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaA...
+2026-03-19 01:15:20,912 - 响应状态 → 200
+2026-03-19 01:15:20,915 - 响应体 → {"id":"chatcmpl-89Dy8MW2YsWnAccOInJwgTDdfHlxq","model":"gpt-4o-image","object":"chat.completion","created":1773854120,"choices":[{"index":0,"message":{"role":"assistant","content":"```json\n{\n  \"prompt\": \"人身虎头，保持原图的神态和氛围，上半身人形，下半身保持老虎形态，或者完全人形但拥有老虎头部，整体逼真，构图完整\",\n  \"ratio\": \"1:1\",\n  \"n\": 1\n}\n```\n\u003e❌ 生成失败\n\u003e 失败原因: 当前 OpenAI 服务出现网络波动或者负载过高，请稍后再试\n"},"finish_reason":"stop"}],"usage":{"prompt_tokens":139,"completion_tokens":107,"total_tokens":246,"prompt_tokens_details":{},"c...
+2026-03-19 01:15:20,918 - 完成 | 输出: 
+2026-03-19 01:15:39,286 - 请求 | PROMPT: 人身虎头，保持原图的神态和氛围，上半身人形，下半身保持老虎形态，或者完全人形但拥有老虎头部，整体逼真，构图完整... | 图片: 1张 | 输出: tiger_human_001
+2026-03-19 01:15:39,286 - 请求 → https://api.tu-zi.com/v1/chat/completions
+2026-03-19 01:15:39,286 - 请求头 → {'Authorization': 'Bearer sk-DjoaOxDvcJ...', 'Content-Type': 'application/json'}
+2026-03-19 01:15:39,287 - 请求体 → {"model": "gpt-4o-image", "messages": [{"role": "user", "content": [{"type": "text", "text": "人身虎头，保持原图的神态和氛围，上半身人形，下半身保持老虎形态，或者完全人形但拥有老虎头部，整体逼真，构图完整"}, {"type": "image_url", "image_url": {"url": "data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaA...
+2026-03-19 01:17:13,479 - 响应状态 → 200
+2026-03-19 01:17:13,480 - 响应体 → {"id":"chatcmpl-89DLviSA11fTQ8vKRwrXpsN9lXvIE","model":"gpt-4o-image","object":"chat.completion","created":1773854233,"choices":[{"index":0,"message":{"role":"assistant","content":"```json\n{\n  \"prompt\": \"人身虎头，保持原图的神态和氛围，上半身人形，下半身保持老虎形态，或者完全人形但拥有老虎头部，整体逼真，构图完整\",\n  \"ratio\": \"1:1\",\n  \"n\": 1\n}\n```\n\u003e❌ 生成失败\n\u003e 失败原因: 当前 OpenAI 服务出现网络波动或者负载过高，请稍后再试\n"},"finish_reason":"stop"}],"usage":{"prompt_tokens":139,"completion_tokens":107,"total_tokens":246,"prompt_tokens_details":{},"c...
+2026-03-19 01:17:13,487 - 完成 | 输出: 
+2026-03-19 01:18:16,764 - 请求 | PROMPT: 人身虎头，保持原图的神态和氛围，上半身人形，下半身保持老虎形态，或者完全人形但拥有老虎头部，整体逼真，构图完整... | 图片: 1张 | 输出: tiger_human_001
+2026-03-19 01:18:16,765 - 请求 → https://api.tu-zi.com/v1/chat/completions
+2026-03-19 01:18:16,765 - 请求头 → {'Authorization': 'Bearer sk-DjoaOxDvcJ...', 'Content-Type': 'application/json'}
+2026-03-19 01:18:16,765 - 请求体 → {"model": "nano-banana", "messages": [{"role": "user", "content": [{"type": "text", "text": "人身虎头，保持原图的神态和氛围，上半身人形，下半身保持老虎形态，或者完全人形但拥有老虎头部，整体逼真，构图完整"}, {"type": "image_url", "image_url": {"url": "data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/4gHYSUNDX1BST0ZJTEUAAQEAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAA...
+2026-03-19 01:18:29,945 - 响应状态 → 200
+2026-03-19 01:18:29,946 - 响应体 → {"id":"chatcmpl-202603181018181941992823KeEKrRn","model":"gemini-2.5-flash-image","object":"chat.completion","created":1773854308,"choices":[{"index":0,"message":{"role":"assistant","content":"![image](https://apioss1.sydney-ai.com/img/119/t9il_0UNjpQmjxMqjxQAjx-nfx1m10kNt7TgYsFuksWxtvFN1aQVjpMm1xkm1pQq1a3nX5oI1xJ8t7TgYsFu1a_r1phTX01mfakV1AlAX7iLkpkVY4VmR8_=/g25fimage-1773854309693-25dec69f.png)"},"finish_reason":"stop"}],"usage":{"prompt_tokens":298,"completion_tokens":1290,"total_tokens":1588,...
+2026-03-19 01:18:32,732 - 下载成功: tiger_human_001.png
+2026-03-19 01:18:32,735 - 已保存: tiger_human_001.png
+2026-03-19 01:18:32,735 - 完成 | 输出: tiger_human_001.png
+2026-03-19 01:18:32,736 - 正在上传图片到飞书...
+2026-03-19 01:18:33,218 - 获取飞书 token 成功
+2026-03-19 01:18:36,845 - 上传图片到飞书成功: img_v3_02vu_23ada8fc-2282-4518-a2fe-e4231fd9507g
+2026-03-19 01:18:37,460 - 发送图片到飞书成功: om_x100b5499a81b9ca0b31598c6812ae8b
+2026-03-19 01:18:37,462 - 已发送到飞书: tiger_human_001.png (msg_id: om_x100b5499a81b9ca0b31598c6812ae8b)
