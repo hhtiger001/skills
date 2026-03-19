@@ -1,47 +1,107 @@
-# Skills
+# OpenClaw Skills
 
-OpenClaw Skills 集合
+一组用于 [OpenClaw](https://github.com/openclaw/openclaw) 的 Agent Skills，提供图片/视频生成、图像理解、网络搜索等能力。
 
-## 目录
+## Skills 列表
 
-| Skill | 说明 |
-|-------|------|
-| media-generator | 使用 tu-zi.com API 生成图片和视频，支持参考图、自动选站、异步/同步模式 |
-| minimax-understand-image | MiniMax 图像理解 |
-| minimax-web-search | MiniMax 网络搜索 |
+| Skill | 说明 | 依赖 |
+|-------|------|------|
+| [media-generator](media-generator/) | 使用 tu-zi.com API 生成图片和视频，支持参考图、自动选站、异步/同步模式 | tu-zi API Key |
+| [minimax-understand-image](minimax-understand-image/) | 使用 MiniMax MCP 进行图像理解和分析 | MiniMax API Key、uvx |
+| [minimax-web-search](minimax-web-search/) | 使用 MiniMax MCP 进行网络搜索 | MiniMax API Key、uvx |
 
 ## 安装
 
+### 前置要求
+
+- [OpenClaw](https://github.com/openclaw/openclaw) 已安装并运行
+- Python 3.9+
+- Node.js 18+（用于 MCP 服务）
+
+### 安装步骤
+
 ```bash
+# 1. 克隆仓库
 git clone https://github.com/hhtiger001/skills.git
-cp -r skills/* ~/.openclaw/skills/
+cd skills
+
+# 2. 复制到 OpenClaw skills 目录
+cp -r media-generator ~/.openclaw/skills/
+cp -r minimax-understand-image ~/.openclaw/skills/
+cp -r minimax-web-search ~/.openclaw/skills/
+
+# 3. 配置 API Key
+# media-generator: 编辑 ~/.openclaw/skills/media-generator/scripts/.tuzi_api_key
+# minimax 系列: 编辑 ~/.mcporter/mcporter.json，填入 MiniMax API Key
 ```
 
-## media-generator
+### 配置说明
 
-统一的图片和视频生成技能，基于 tu-zi.com API。
+#### media-generator
 
-### 功能特性
+需要 tu-zi.com API Key：
 
-- 🖼️ **图片生成**：支持 Gemini、NanoBanana 等多种模型
-- 🎬 **视频生成**：支持豆包 Seedance 系列模型
-- 🖼️ **参考图**：支持上传参考图辅助生成
-- 🔄 **异步模式**：默认异步，任务队列机制
-- ⚡ **自动选站**：并行检测 5 个站点，自动选最快
-- 📝 **历史记录**：自动记录每次生成
-- 📊 **模型外置**：models.json 统一管理模型/站点/尺寸
+```bash
+# 获取 API Key: https://api.tu-zi.com/token
+echo "sk-your-api-key" > ~/.openclaw/skills/media-generator/scripts/.tuzi_api_key
+chmod 600 ~/.openclaw/skills/media-generator/scripts/.tuzi_api_key
+```
 
-### 模型价格
+#### minimax-understand-image / minimax-web-search
 
-| 分类 | 最便宜 | 性价比 |
-|------|--------|--------|
-| 图片（异步） | gemini-3-pro-image-preview-async $0.06/次 | gemini-3-pro-image-preview-4k-async $0.20/次 |
-| 视频 | doubao-seedance-1-0-lite_480p $0.07/秒 | doubao-seedance-1-0-lite_720p $0.17/秒 |
+需要配置 [mcporter](https://github.com/isaacwaker/mcporter)：
 
-### 站点
+```bash
+# 安装 mcporter
+npm install -g mcporter
 
-- api.ourzhishi.top（广州）
-- apius.tu-zi.com（CDN备用）
-- apicdn.tu-zi.com（CDN备用）
-- api.tu-zi.com（主站点）
-- api.sydney-ai.com（美国）
+# 创建配置文件
+mkdir -p ~/.mcporter
+cat > ~/.mcporter/mcporter.json << 'EOF'
+{
+  "mcpServers": {
+    "minimax": {
+      "command": "uvx",
+      "args": ["minimax-mcp"],
+      "env": {
+        "MINIMAX_API_KEY": "your-api-key"
+      }
+    }
+  }
+}
+EOF
+
+# 验证
+mcporter list
+```
+
+## 使用
+
+Skills 安装完成后，OpenClaw 会自动识别并根据用户消息触发对应 Skill：
+
+- **生成图片/视频**：发送"生成图片"或"生成视频"，可附带参考图
+- **图像理解**：发送图片并要求分析/描述
+- **网络搜索**：要求搜索在线信息
+
+## 项目结构
+
+```
+skills/
+├── media-generator/           # 图片/视频生成
+│   ├── SKILL.md               # Skill 定义
+│   └── scripts/
+│       ├── generate_media.py  # 生成脚本
+│       ├── models.json        # 模型/站点配置
+│       └── gen/               # 生成产物（自动创建）
+├── minimax-understand-image/  # 图像理解
+│   ├── SKILL.md
+│   └── scripts/
+├── minimax-web-search/        # 网络搜索
+│   ├── SKILL.md
+│   └── scripts/
+└── README.md
+```
+
+## License
+
+MIT
