@@ -1,0 +1,333 @@
+{
+  "image": {
+    "async": [
+      {
+        "model": "gemini-3-pro-image-preview-async",
+        "resolution": "1K",
+        "price": "$0.06/次",
+        "tags": ["⭐最便宜"],
+        "note": "失败不扣费",
+        "api": "videos"
+      },
+      {
+        "model": "gemini-2.5-flash-image",
+        "resolution": "-",
+        "price": "$0.06/次",
+        "tags": [],
+        "note": "Flash 版本",
+        "api": "videos"
+      },
+      {
+        "model": "gemini-2.5-flash-image-nt",
+        "resolution": "-",
+        "price": "$0.08/次",
+        "tags": [],
+        "note": "无内置翻译，纯原生",
+        "api": "videos"
+      },
+      {
+        "model": "nano-banana-nt",
+        "resolution": "-",
+        "price": "$0.08/次",
+        "tags": [],
+        "note": "无内置翻译，纯原生",
+        "api": "videos"
+      },
+      {
+        "model": "nano-banana-vip",
+        "resolution": "-",
+        "price": "$0.08/次",
+        "tags": [],
+        "note": "VIP 版本",
+        "api": "videos"
+      },
+      {
+        "model": "gemini-2.5-flash-image-preview-nt",
+        "resolution": "-",
+        "price": "$0.08/次",
+        "tags": [],
+        "note": "无内置翻译，纯原生",
+        "api": "videos"
+      },
+      {
+        "model": "nano-banana-hd",
+        "resolution": "-",
+        "price": "$0.20/次",
+        "tags": ["💰性价比"],
+        "note": "高清",
+        "api": "videos"
+      },
+      {
+        "model": "gemini-3-pro-image-preview-2k-async",
+        "resolution": "2K",
+        "price": "$0.16/次",
+        "tags": [],
+        "note": "失败不扣费",
+        "api": "videos"
+      },
+      {
+        "model": "gemini-3-pro-image-preview-4k-async",
+        "resolution": "4K",
+        "price": "$0.20/次",
+        "tags": ["💰性价比"],
+        "note": "4K + 失败不扣费",
+        "api": "videos"
+      },
+      {
+        "model": "nano-banana-2-2k",
+        "resolution": "2K",
+        "price": "$0.254/次",
+        "tags": [],
+        "note": "Banana 2代",
+        "api": "videos"
+      },
+      {
+        "model": "nano-banana-2-4k",
+        "resolution": "4K",
+        "price": "$0.254/次",
+        "tags": [],
+        "note": "Banana 2代",
+        "api": "videos"
+      },
+      {
+        "model": "gemini-3-pro-image-preview",
+        "resolution": "-",
+        "price": "$0.354/次",
+        "tags": [],
+        "note": "同步，按次计费",
+        "api": "chat"
+      },
+      {
+        "model": "gemini-3-pro-image-preview-2k",
+        "resolution": "2K",
+        "price": "$0.354/次",
+        "tags": [],
+        "note": "同步，按次计费",
+        "api": "chat"
+      },
+      {
+        "model": "gemini-3-pro-image-preview-4k",
+        "resolution": "4K",
+        "price": "$0.354/次",
+        "tags": [],
+        "note": "同步，按次计费",
+        "api": "chat"
+      },
+      {
+        "model": "nano-banana-pro",
+        "resolution": "-",
+        "price": "$0.354/次",
+        "tags": [],
+        "note": "Pro 版",
+        "api": "videos"
+      },
+      {
+        "model": "nano-banana-pro-2k",
+        "resolution": "2K",
+        "price": "$0.354/次",
+        "tags": [],
+        "note": "Pro 2K",
+        "api": "videos"
+      },
+      {
+        "model": "nano-banana-pro-4k",
+        "resolution": "4K",
+        "price": "$0.354/次",
+        "tags": [],
+        "note": "Pro 4K",
+        "api": "videos"
+      },
+      {
+        "model": "nano-banana",
+        "resolution": "-",
+        "price": "$0.06/次",
+        "tags": [],
+        "note": "经典同步模型",
+        "api": "chat"
+      },
+      {
+        "model": "gemini-3-pro-image-preview-vip",
+        "resolution": "-",
+        "price": "$0.80/次",
+        "tags": [],
+        "note": "VIP 更稳定",
+        "api": "videos"
+      },
+      {
+        "model": "gemini-3-pro-image-preview-2k-vip",
+        "resolution": "2K",
+        "price": "$0.80/次",
+        "tags": [],
+        "note": "VIP 更稳定",
+        "api": "videos"
+      },
+      {
+        "model": "gemini-3-pro-image-preview-4k-vip",
+        "resolution": "4K",
+        "price": "$0.80/次",
+        "tags": [],
+        "note": "VIP 更稳定",
+        "api": "videos"
+      },
+      {
+        "model": "nano-banana-pro-vip",
+        "resolution": "-",
+        "price": "$0.60/次",
+        "tags": [],
+        "note": "Pro VIP",
+        "api": "videos"
+      },
+      {
+        "model": "nano-banana-pro-2k-vip",
+        "resolution": "2K",
+        "price": "$0.60/次",
+        "tags": [],
+        "note": "Pro VIP 2K",
+        "api": "videos"
+      }
+    ]
+  },
+  "video": {
+    "async": [
+      {
+        "model": "doubao-seedance-2-0_720p",
+        "resolution": "720p",
+        "price": "-",
+        "tags": ["🆕最新"],
+        "note": "Seedance 2.0",
+        "api": "videos"
+      },
+      {
+        "model": "doubao-seedance-2-0_480p",
+        "resolution": "480p",
+        "price": "-",
+        "tags": ["🆕最新"],
+        "note": "Seedance 2.0",
+        "api": "videos"
+      },
+      {
+        "model": "doubao-seedance-1-5-pro_1080p",
+        "resolution": "1080p",
+        "price": "$0.36/秒",
+        "tags": [],
+        "note": "1.5 Pro 有声视频",
+        "api": "videos"
+      },
+      {
+        "model": "doubao-seedance-1-5-pro_720p",
+        "resolution": "720p",
+        "price": "$0.18/秒",
+        "tags": ["💰性价比"],
+        "note": "1.5 Pro",
+        "api": "videos"
+      },
+      {
+        "model": "doubao-seedance-1-5-pro_480p",
+        "resolution": "480p",
+        "price": "$0.09/秒",
+        "tags": ["⭐最便宜"],
+        "note": "1.5 Pro",
+        "api": "videos"
+      },
+      {
+        "model": "doubao-seedance-1-0-pro_1080p",
+        "resolution": "1080p",
+        "price": "$0.88/秒",
+        "tags": [],
+        "note": "1.0 Pro",
+        "api": "videos"
+      },
+      {
+        "model": "doubao-seedance-1-0-pro_720p",
+        "resolution": "720p",
+        "price": "$0.40/秒",
+        "tags": [],
+        "note": "1.0 Pro",
+        "api": "videos"
+      },
+      {
+        "model": "doubao-seedance-1-0-pro_480p",
+        "resolution": "480p",
+        "price": "$0.17/秒",
+        "tags": [],
+        "note": "1.0 Pro",
+        "api": "videos"
+      },
+      {
+        "model": "doubao-seedance-1-0-pro-fast_1080p",
+        "resolution": "1080p",
+        "price": "$0.35/秒",
+        "tags": [],
+        "note": "1.0 Pro Fast",
+        "api": "videos"
+      },
+      {
+        "model": "doubao-seedance-1-0-pro-fast_720p",
+        "resolution": "720p",
+        "price": "$0.16/秒",
+        "tags": [],
+        "note": "1.0 Pro Fast",
+        "api": "videos"
+      },
+      {
+        "model": "doubao-seedance-1-0-pro-fast_480p",
+        "resolution": "480p",
+        "price": "$0.07/秒",
+        "tags": ["⭐最便宜"],
+        "note": "1.0 Pro Fast",
+        "api": "videos"
+      },
+      {
+        "model": "doubao-seedance-1-0-lite_1080p",
+        "resolution": "1080p",
+        "price": "$0.35/秒",
+        "tags": [],
+        "note": "1.0 Lite",
+        "api": "videos"
+      },
+      {
+        "model": "doubao-seedance-1-0-lite_720p",
+        "resolution": "720p",
+        "price": "$0.17/秒",
+        "tags": ["💰性价比"],
+        "note": "1.0 Lite",
+        "api": "videos"
+      },
+      {
+        "model": "doubao-seedance-1-0-lite_480p",
+        "resolution": "480p",
+        "price": "$0.07/秒",
+        "tags": ["⭐最便宜"],
+        "note": "1.0 Lite",
+        "api": "videos"
+      },
+      {
+        "model": "doubao-seedance-1-0-pro-250528",
+        "resolution": "-",
+        "price": "$2/次",
+        "tags": [],
+        "note": "1.0 Pro 按次计费",
+        "api": "videos"
+      },
+      {
+        "model": "doubao-seedance-1-5-pro-251215",
+        "resolution": "-",
+        "price": "$1.44/M in + $23.04/M out",
+        "tags": [],
+        "note": "1.5 Pro 原价",
+        "api": "videos"
+      }
+    ]
+  },
+  "sites": [
+    {"url": "https://api.ourzhishi.top/v1", "name": "广州"},
+    {"url": "https://apius.tu-zi.com/v1", "name": "CDN备用1"},
+    {"url": "https://apicdn.tu-zi.com/v1", "name": "CDN备用2"},
+    {"url": "https://api.tu-zi.com/v1", "name": "主站点"},
+    {"url": "https://api.sydney-ai.com/v1", "name": "美国"}
+  ],
+  "sizes": {
+    "image": ["1:1", "2:3", "3:2", "3:4", "4:3", "4:5", "5:4", "9:16", "16:9", "21:9"],
+    "video": ["16:9", "9:16", "4:3", "3:4", "1:1", "21:9", "keep_ratio", "adaptive"]
+  }
+}

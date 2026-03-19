@@ -1,2 +1,15 @@
 # Output directories
 scripts/output_*/
+
+# 生成产物
+scripts/gen/
+scripts/logs/
+scripts/reference_images/
+
+# 凭据
+scripts/.tuzi_api_key
+scripts/.site_cache.json
+
+# IDE
+.idea/
+.DS_Store
