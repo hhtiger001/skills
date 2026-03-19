@@ -1,15 +1,28 @@
-# Output directories
-scripts/output_*/
+# macOS
+.DS_Store
+
+# IDE
+.idea/
+
+# Python
+__pycache__/
 
 # 生成产物
 scripts/gen/
 scripts/logs/
 scripts/reference_images/
+scripts/output_*/
 
 # 凭据
 scripts/.tuzi_api_key
 scripts/.site_cache.json
 
-# IDE
-.idea/
-.DS_Store
+# API Key
+.tuzi_api_key
+
+# Generated files
+*.png
+*.jpg
+*.jpeg
+*.log
+response.json
