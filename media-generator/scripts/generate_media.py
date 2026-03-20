@@ -2,8 +2,8 @@
 """
 媒体生成脚本（图片 + 视频）
 支持两种模式：
-  sync  - 同步生成（chat/completions）
-  async - 异步生成（/v1/videos，任务队列）
+  sync  - 同步生成（通过 tuzi_api 自动路由到 gemini/images/chat 接口）
+  async - 异步生成（/v1/videos，任务队列，保留进度打印）
 
 只负责生成，输出到 gen/ 目录
 不发消息（发送由调用者负责）
@@ -17,6 +17,8 @@ import time
 import logging
 import requests
 from datetime import datetime
+
+from tuzi_api import TuziAPI
 
 # ========================
 # 日志配置
@@ -183,12 +185,6 @@ def get_base_url():
 def get_output_path(filename):
     return os.path.join(OUTPUT_DIR, filename)
 
-def image_to_base64(path):
-    ext = os.path.splitext(path)[1].lower()
-    mime = "image/jpeg" if ext in [".jpg", ".jpeg"] else "image/png"
-    with open(path, "rb") as f:
-        return f"data:{mime};base64," + base64.b64encode(f.read()).decode()
-
 def get_reference_path(filename):
     if os.path.isabs(filename):
         return filename
@@ -210,229 +206,147 @@ def detect_media_type(model_name):
     return "image"
 
 # ========================
-# 同步模式（chat/completions）
+# 同步模式（通过 tuzi_api）
 # ========================
 
-def build_messages():
-    content = [{"type": "text", "text": PROMPT}]
-    for img in IMAGE_PATHS:
-        full_path = get_reference_path(img)
-        if os.path.exists(full_path):
-            content.append({"type": "image_url", "image_url": {"url": image_to_base64(full_path)}})
-        else:
-            logger.warning(f"参考图不存在: {full_path}")
-    return [{"role": "user", "content": content}]
-
-def call_api_sync(base_url, messages):
-    url = f"{base_url}/chat/completions"
-    headers = {"Authorization": f"Bearer {API_KEY}", "Content-Type": "application/json"}
-    payload = {"model": MODEL, "messages": messages}
-
-    logger.info(f"[sync] 请求 → {url}")
-    logger.info(f"[sync] 请求体 → {json.dumps(payload, ensure_ascii=False)[:500]}...")
-
-    r = requests.post(url, headers=headers, json=payload, timeout=TIMEOUT,
-                      proxies={"http": None, "https": None})
-    r.raise_for_status()
-    logger.info(f"[sync] 响应状态 → {r.status_code}")
-    logger.info(f"[sync] 响应体 → {r.text[:500]}...")
-    return r.json()
-
-def save_images_from_content(content):
-    img_index = 1
-    saved_files = []
-
-    # base64 图片
-    base64_pattern = r"data:image/[^;]+;base64,([A-Za-z0-9+/=\n\r]+)"
-    for m in re.finditer(base64_pattern, content):
-        data = base64.b64decode(m.group(1))
-        filename = f"{OUTPUT_NAME}.png" if OUTPUT_NAME else f"image_{img_index}.png"
+def save_result(url, media_format):
+    """保存生成结果（data URI 或 HTTP URL）到文件，返回文件名"""
+    if url.startswith("data:"):
+        # data URI → 解码 base64 并保存
+        match = re.match(r"data:([^;]+);base64,(.+)", url)
+        if not match:
+            raise Exception(f"无法解析 data URI: {url[:60]}...")
+        mime = match.group(1)
+        ext_map = {"image/png": ".png", "image/jpeg": ".jpg", "image/gif": ".gif", "image/webp": ".webp"}
+        ext = ext_map.get(mime, ".png")
+        data = base64.b64decode(match.group(2))
+        filename = f"{OUTPUT_NAME}{ext}" if OUTPUT_NAME else f"sync_{int(time.time())}{ext}"
         path = get_output_path(filename)
         with open(path, "wb") as f:
             f.write(data)
-        saved_files.append(path)
-        content = content.replace(m.group(0), f"[{filename}]")
-        img_index += 1
+        logger.info(f"已保存: {filename} ({len(data)} bytes)")
+    else:
+        # HTTP URL → 下载
+        ext = os.path.splitext(url.split("?")[0])[1] or ".png"
+        if media_format == "video":
+            ext = ".mp4"
+        filename = f"{OUTPUT_NAME}{ext}" if OUTPUT_NAME else f"sync_{int(time.time())}{ext}"
+        download_file(url, filename)
 
-    # URL 图片
-    url_pattern = r"https?://[^\s<>\"']+\.(png|jpg|jpeg|gif)"
-    for m in re.finditer(url_pattern, content):
-        url = m.group(0)
-        try:
-            ext = os.path.splitext(url)[1] or ".png"
-            filename = f"{OUTPUT_NAME}{ext}" if OUTPUT_NAME else f"url_{img_index}.png"
-            path = download_file(url, filename)
-            saved_files.append(path)
-            content = content.replace(url, f"[{filename}]")
-            img_index += 1
-        except Exception as e:
-            logger.error(f"下载图片失败: {e}")
-
-    return content, saved_files
+    return filename
 
 def main_sync():
     base_url = get_base_url()
-    media_type = detect_media_type(MODEL)
-    logger.info(f"[sync] PROMPT: {PROMPT[:100]}... | 图片: {len(IMAGE_PATHS)}张 | 输出: {OUTPUT_NAME or '自动'} | 站点: {base_url}")
+    api = TuziAPI(api_key=API_KEY, base_url=base_url, timeout=TIMEOUT, poll_interval=POLL_INTERVAL)
 
-    messages = build_messages()
-    response = call_api_sync(base_url, messages)
-    content = response["choices"][0]["message"]["content"]
-    content, saved_files = save_images_from_content(content)
-
-    generated_filenames = []
-    for i, src in enumerate(saved_files):
-        filename = os.path.basename(src)
-        if OUTPUT_NAME and i == 0:
-            ext = os.path.splitext(filename)[1] or ".png"
-            filename = f"{OUTPUT_NAME}{ext}"
-            dst = get_output_path(filename)
-            if src != dst:
-                os.rename(src, dst)
-        generated_filenames.append(filename)
-        logger.info(f"已保存: {filename}")
-
-    logger.info(f"[sync] 完成 | 输出: {', '.join(generated_filenames)}")
-    if generated_filenames:
-        print(f"OUTPUT_FILENAME: {generated_filenames[0]}")
-        save_history({
-            "mode": "sync", "type": media_type, "model": MODEL,
-            "prompt": PROMPT, "site": base_url, "output": generated_filenames[0],
-            "status": "success", "reference_images": IMAGE_PATHS,
-        })
-
-# ========================
-# 异步模式（/v1/videos）
-# ========================
-
-def create_async_task(base_url):
-    """创建异步图片/视频生成任务（支持多张参考图）"""
-    base = base_url.replace("/v1", "") if base_url.endswith("/v1") else base_url
-    url = f"{base}/v1/videos"
-    headers = {"Authorization": f"Bearer {API_KEY}"}
-
-    # 使用 list 而非 dict，支持多个同名字段（多张参考图）
-    form_data = [
-        ("model", (None, MODEL)),
-        ("prompt", (None, PROMPT)),
-    ]
-    if SIZE:
-        form_data.append(("size", (None, SIZE)))
-
-    # 打开的文件句柄，用于 finally 关闭
-    opened_files = []
-
-    # 添加参考图（input_reference）— 支持多张
+    # 构建参考图路径列表
+    image_list = []
     for img in IMAGE_PATHS:
         full_path = get_reference_path(img)
         if os.path.exists(full_path):
-            f = open(full_path, "rb")
-            opened_files.append(f)
-            form_data.append(("input_reference", (os.path.basename(full_path), f)))
-            logger.info(f"[async] 添加参考图: {full_path}")
+            image_list.append(full_path)
         else:
-            logger.warning(f"[async] 参考图不存在: {full_path}")
+            logger.warning(f"参考图不存在: {full_path}")
 
-    # 视频专用：秒数（异步模式必需，范围 4-11）
-    SECONDS = os.environ.get("SECONDS", "")
-    if SECONDS:
-        form_data.append(("seconds", (None, SECONDS)))
+    logger.info(f"[sync] PROMPT: {PROMPT[:100]}... | 图片: {len(image_list)}张 | 输出: {OUTPUT_NAME or '自动'} | 站点: {base_url}")
 
-    # 视频专用：首帧图
+    result = api.generate(
+        model=MODEL,
+        prompt=PROMPT,
+        images=image_list or None,
+        size=SIZE or None,
+    )
+
+    if result["status"] != "completed":
+        error_msg = result.get("error", "未知错误")
+        logger.error(f"[sync] 生成失败: {error_msg}")
+        raise Exception(f"同步生成失败: {error_msg}")
+
+    url = result["url"]
+    media_format = result.get("format", "image")
+    filename = save_result(url, media_format)
+
+    logger.info(f"[sync] 完成 | 输出: {filename}")
+    print(f"OUTPUT_FILENAME: {filename}")
+    save_history({
+        "mode": "sync", "type": media_format, "model": MODEL,
+        "prompt": PROMPT, "site": base_url, "output": filename,
+        "status": "success", "reference_images": IMAGE_PATHS,
+    })
+
+# ========================
+# 异步模式（通过 tuzi_api 统一封装）
+# ========================
+
+def create_async_task(base_url):
+    """创建异步图片/视频生成任务（通过 TuziAPI）"""
+    api = TuziAPI(api_key=API_KEY, base_url=base_url)
+
+    # 准备 images 参数（本地文件路径列表）
+    img_paths = [get_reference_path(p) for p in IMAGE_PATHS if os.path.exists(get_reference_path(p))]
+
+    # 准备 kwargs
+    kwargs = {}
+    if SIZE:
+        kwargs["size"] = SIZE
+    seconds = os.environ.get("SECONDS", "")
+    if seconds:
+        kwargs["seconds"] = int(seconds)
+
+    # 首帧图
     first_frame = os.environ.get("FIRST_FRAME", "")
     if first_frame:
         ff_path = get_reference_path(first_frame)
         if os.path.exists(ff_path):
-            ff_file = open(ff_path, "rb")
-            opened_files.append(ff_file)
-            form_data.append(("first_frame_image", (os.path.basename(ff_path), ff_file)))
+            kwargs["first_frame_image"] = ff_path
             logger.info(f"[async] 添加首帧图: {ff_path}")
 
-    # 视频专用：尾帧图
+    # 尾帧图
     last_frame = os.environ.get("LAST_FRAME", "")
     if last_frame:
         lf_path = get_reference_path(last_frame)
         if os.path.exists(lf_path):
-            lf_file = open(lf_path, "rb")
-            opened_files.append(lf_file)
-            form_data.append(("last_frame_image", (os.path.basename(lf_path), lf_file)))
+            kwargs["last_frame_image"] = lf_path
             logger.info(f"[async] 添加尾帧图: {lf_path}")
 
-    logger.info(f"[async] 创建任务 → {url}")
-    logger.info(f"[async] model={MODEL}, size={SIZE or '默认'}, 图片={len(IMAGE_PATHS)}张")
+    logger.info(f"[async] 创建任务 | model={MODEL}, size={SIZE or '默认'}, 图片={len(img_paths)}张")
 
-    try:
-        r = requests.post(url, headers=headers, files=form_data, timeout=60,
-                          proxies={"http": None, "https": None})
-        r.raise_for_status()
-    finally:
-        for f in opened_files:
-            f.close()
+    result = api.submit_video(MODEL, PROMPT, images=img_paths or None, **kwargs)
 
-    result = r.json()
-    task_id = result.get("id", "")
-    status = result.get("status", "unknown")
-    logger.info(f"[async] 任务已创建 | id={task_id} | status={status}")
+    task_id = result.get("task_id", "")
+    logger.info(f"[async] 任务已创建 | id={task_id} | status={result.get('status', 'unknown')}")
     print(f"TASK_ID: {task_id}")
-    print(f"TASK_STATUS: {status}")
+    print(f"TASK_STATUS: {result.get('status', 'unknown')}")
 
-    return task_id, base
+    return task_id, base_url
 
-def poll_async_task(task_id, base):
-    """轮询查询任务状态"""
-    url = f"{base}/v1/videos/{task_id}"
-    headers = {"Authorization": f"Bearer {API_KEY}"}
 
-    start_time = time.time()
-    while time.time() - start_time < POLL_TIMEOUT:
-        r = requests.get(url, headers=headers, timeout=30,
-                         proxies={"http": None, "https": None})
-        r.raise_for_status()
-        result = r.json()
+def poll_async_task(task_id, base_url):
+    """轮询查询任务状态（通过 TuziAPI）"""
+    api = TuziAPI(api_key=API_KEY, base_url=base_url)
 
-        status = result.get("status", "unknown")
-        progress = result.get("progress", 0)
+    def on_progress(status, progress):
         logger.info(f"[async] 轮询 | id={task_id} | status={status} | progress={progress}%")
         print(f"TASK_STATUS: {status} | progress={progress}%")
 
-        if status == "completed":
-            return result
-        elif status in ["failed", "cancelled"]:
-            raise Exception(f"异步任务失败 | id={task_id} | status={status}")
+    result = api.poll_video(
+        task_id,
+        timeout=POLL_TIMEOUT,
+        poll_interval=POLL_INTERVAL,
+        progress_callback=on_progress,
+    )
 
-        time.sleep(POLL_INTERVAL)
+    if result["status"] == "completed":
+        return result
+    else:
+        raise Exception(f"异步任务失败 | id={task_id} | {result.get('error', '')}")
 
-    raise Exception(f"异步任务超时 | id={task_id} | 等待超过 {POLL_TIMEOUT} 秒")
 
 def extract_result_from_async(result):
     """从异步结果中提取文件 URL 并下载"""
-    file_url = None
-
-    # 按优先级尝试各字段
-    for key in ["url", "output", "result"]:
-        if key in result:
-            val = result[key]
-            if isinstance(val, str) and val.startswith("http"):
-                file_url = val
-                break
-            elif isinstance(val, dict) and "url" in val:
-                file_url = val["url"]
-                break
-
-    # 尝试 data.url
-    if not file_url and "data" in result and isinstance(result["data"], dict):
-        file_url = result["data"].get("url")
-
-    # 全文搜索 URL（支持图片和视频格式）
+    file_url = result.get("url", "")
     if not file_url:
-        result_str = json.dumps(result)
-        url_match = re.search(r'https?://[^\s"\'<>]+\.(png|jpg|jpeg|gif|webp|mp4)', result_str)
-        if url_match:
-            file_url = url_match.group(0)
-
-    if not file_url:
-        logger.error(f"[async] 无法从结果中提取 URL: {json.dumps(result)[:1000]}")
-        raise Exception("异步任务完成但未找到文件 URL")
+        raise Exception(f"无文件 URL: {result}")
 
     logger.info(f"[async] 文件 URL: {file_url}")
     ext = os.path.splitext(file_url.split("?")[0])[1] or ".mp4"
@@ -445,9 +359,9 @@ def main_async():
     media_type = detect_media_type(MODEL)
     logger.info(f"[async] PROMPT: {PROMPT[:100]}... | model={MODEL} | 图片: {len(IMAGE_PATHS)}张 | 输出: {OUTPUT_NAME or '自动'} | 站点: {base_url}")
 
-    task_id, base = create_async_task(base_url)
+    task_id, base_url = create_async_task(base_url)
     logger.info(f"[async] 开始轮询任务 {task_id}...")
-    result = poll_async_task(task_id, base)
+    result = poll_async_task(task_id, base_url)
     filename = extract_result_from_async(result)
 
     logger.info(f"[async] 完成 | 输出: {filename}")

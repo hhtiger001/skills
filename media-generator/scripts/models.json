@@ -2,60 +2,160 @@
   "image": {
     "async": [
       {
+        "model": "gemini-3.1-flash-image-preview",
+        "resolution": "-",
+        "price": "$0.254/次",
+        "tags": [],
+        "note": "Seedream 4.5 同款",
+        "api": "videos"
+      },
+      {
+        "model": "gpt-image-1.5",
+        "resolution": "-",
+        "price": "$0.04/次",
+        "tags": [
+          "⭐最便宜"
+        ],
+        "note": "OpenAI 最新顶级绘图",
+        "api": "videos"
+      },
+      {
+        "model": "gpt-image-1",
+        "resolution": "-",
+        "price": "$0.04/次",
+        "tags": [],
+        "note": "OpenAI 图片生成",
+        "api": "videos"
+      },
+      {
+        "model": "gpt-image-1-vip",
+        "resolution": "-",
+        "price": "$0.1/次",
+        "tags": [],
+        "note": "VIP更稳定",
+        "api": "videos"
+      },
+      {
+        "model": "gpt-4o-image",
+        "resolution": "-",
+        "price": "$0.04/次",
+        "tags": [],
+        "note": "GPT-4o 图片生成",
+        "api": "videos"
+      },
+      {
+        "model": "gpt-4o-image-vip",
+        "resolution": "-",
+        "price": "$0.1/次",
+        "tags": [],
+        "note": "VIP更稳定",
+        "api": "videos"
+      },
+      {
+        "model": "gpt-4o-image-async",
+        "resolution": "-",
+        "price": "$0.04/次",
+        "tags": [],
+        "note": "异步，失败不扣费",
+        "api": "videos"
+      },
+      {
+        "model": "gpt-4o-image-vip-async",
+        "resolution": "-",
+        "price": "$0.1/次",
+        "tags": [],
+        "note": "VIP异步",
+        "api": "videos"
+      },
+      {
+        "model": "gemini-2.0-flash-preview-image-generation",
+        "resolution": "-",
+        "price": "$0.04/次",
+        "tags": [],
+        "note": "Gemini-Mix",
+        "api": "videos"
+      },
+      {
+        "model": "doubao-seedream-4-5-251128",
+        "resolution": "-",
+        "price": "$0.172/次",
+        "tags": [],
+        "note": "豆包 Seedream 4.5",
+        "api": "videos"
+      },
+      {
+        "model": "doubao-seedream-4-0-250828",
+        "resolution": "-",
+        "price": "$0.2/次",
+        "tags": [],
+        "note": "豆包即梦 4.0",
+        "api": "videos"
+      },
+      {
+        "model": "seedream-4-0-250828",
+        "resolution": "-",
+        "price": "$0.2/次",
+        "tags": [],
+        "note": "即梦 4.0",
+        "api": "videos"
+      },
+      {
+        "model": "seedream-v4",
+        "resolution": "-",
+        "price": "$0.2/次",
+        "tags": [],
+        "note": "即梦 4.0",
+        "api": "videos"
+      },
+      {
+        "model": "seedream-3.0",
+        "resolution": "-",
+        "price": "$0.11/次",
+        "tags": [],
+        "note": "即梦 3.0",
+        "api": "videos"
+      },
+      {
+        "model": "flux-kontext-max",
+        "resolution": "-",
+        "price": "$0.4/次",
+        "tags": [],
+        "note": "Flux Kontext Max",
+        "api": "videos"
+      },
+      {
+        "model": "flux-kontext-pro",
+        "resolution": "-",
+        "price": "$0.2/次",
+        "tags": [],
+        "note": "Flux Kontext Pro",
+        "api": "videos"
+      },
+      {
+        "model": "qwen-image-2.0",
+        "resolution": "-",
+        "price": "$0.1/次",
+        "tags": [],
+        "note": "通义万相",
+        "api": "videos"
+      },
+      {
+        "model": "gemini-2.5-flash-image-hd",
+        "resolution": "-",
+        "price": "$0.2/次",
+        "tags": [],
+        "note": "高清",
+        "api": "videos"
+      },
+      {
         "model": "gemini-3-pro-image-preview-async",
         "resolution": "1K",
         "price": "$0.06/次",
-        "tags": ["⭐最便宜"],
+        "tags": [
+          "⭐最便宜"
+        ],
         "note": "失败不扣费",
-        "api": "videos"
-      },
-      {
-        "model": "gemini-2.5-flash-image",
-        "resolution": "-",
-        "price": "$0.06/次",
-        "tags": [],
-        "note": "Flash 版本",
-        "api": "videos"
-      },
-      {
-        "model": "gemini-2.5-flash-image-nt",
-        "resolution": "-",
-        "price": "$0.08/次",
-        "tags": [],
-        "note": "无内置翻译，纯原生",
-        "api": "videos"
-      },
-      {
-        "model": "nano-banana-nt",
-        "resolution": "-",
-        "price": "$0.08/次",
-        "tags": [],
-        "note": "无内置翻译，纯原生",
-        "api": "videos"
-      },
-      {
-        "model": "nano-banana-vip",
-        "resolution": "-",
-        "price": "$0.08/次",
-        "tags": [],
-        "note": "VIP 版本",
-        "api": "videos"
-      },
-      {
-        "model": "gemini-2.5-flash-image-preview-nt",
-        "resolution": "-",
-        "price": "$0.08/次",
-        "tags": [],
-        "note": "无内置翻译，纯原生",
-        "api": "videos"
-      },
-      {
-        "model": "nano-banana-hd",
-        "resolution": "-",
-        "price": "$0.20/次",
-        "tags": ["💰性价比"],
-        "note": "高清",
-        "api": "videos"
+        "api": "gemini"
       },
       {
         "model": "gemini-3-pro-image-preview-2k-async",
@@ -63,15 +163,117 @@
         "price": "$0.16/次",
         "tags": [],
         "note": "失败不扣费",
-        "api": "videos"
+        "api": "gemini"
       },
       {
         "model": "gemini-3-pro-image-preview-4k-async",
         "resolution": "4K",
-        "price": "$0.20/次",
-        "tags": ["💰性价比"],
+        "price": "$0.2/次",
+        "tags": [
+          "💰性价比"
+        ],
         "note": "4K + 失败不扣费",
+        "api": "gemini"
+      },
+      {
+        "model": "FLUX.1-Kontext-pro",
+        "resolution": "-",
+        "price": "Input: $600/M tokens",
+        "tags": [],
+        "note": "Flux Kontext Pro（大写）",
         "api": "videos"
+      },
+      {
+        "model": "doubao-seedream-5-0-260128",
+        "resolution": "-",
+        "price": "$0.1/次",
+        "tags": [],
+        "note": "豆包 Seedream 5.0",
+        "api": "videos"
+      },
+      {
+        "model": "seedream-5.0",
+        "resolution": "-",
+        "price": "$0.1/次",
+        "tags": [],
+        "note": "即梦 5.0",
+        "api": "videos"
+      }
+    ],
+    "sync": [
+      {
+        "model": "gemini-3-pro-image-preview-vip",
+        "resolution": "-",
+        "price": "$0.8/次",
+        "tags": [],
+        "note": "VIP 更稳定",
+        "api": "gemini"
+      },
+      {
+        "model": "gemini-3-pro-image-preview-2k-vip",
+        "resolution": "2K",
+        "price": "$0.8/次",
+        "tags": [],
+        "note": "VIP 更稳定",
+        "api": "gemini"
+      },
+      {
+        "model": "gemini-3-pro-image-preview-4k-vip",
+        "resolution": "4K",
+        "price": "$0.8/次",
+        "tags": [],
+        "note": "VIP 更稳定",
+        "api": "gemini"
+      },
+      {
+        "model": "gemini-2.5-flash-image",
+        "resolution": "-",
+        "price": "$0.06/次",
+        "tags": [],
+        "note": "Flash 版本",
+        "api": "images"
+      },
+      {
+        "model": "gemini-2.5-flash-image-nt",
+        "resolution": "-",
+        "price": "$0.08/次",
+        "tags": [],
+        "note": "无内置翻译，纯原生",
+        "api": "images"
+      },
+      {
+        "model": "gemini-2.5-flash-image-preview-nt",
+        "resolution": "-",
+        "price": "$0.08/次",
+        "tags": [],
+        "note": "无内置翻译，纯原生",
+        "api": "images"
+      },
+      {
+        "model": "nano-banana-nt",
+        "resolution": "-",
+        "price": "$0.08/次",
+        "tags": [],
+        "note": "无内置翻译，纯原生",
+        "api": "gemini"
+      },
+      {
+        "model": "nano-banana-vip",
+        "resolution": "-",
+        "price": "$0.08/次",
+        "tags": [],
+        "note": "VIP 版本",
+        "api": "gemini"
+      },
+      {
+        "model": "nano-banana-hd",
+        "resolution": "-",
+        "price": "$0.2/次",
+        "tags": [
+          "💰性价比"
+        ],
+        "note": "高清",
+        "api": "gemini"
       },
       {
         "model": "nano-banana-2-2k",
@@ -79,7 +281,7 @@
         "price": "$0.254/次",
         "tags": [],
         "note": "Banana 2代",
-        "api": "videos"
+        "api": "gemini"
       },
       {
         "model": "nano-banana-2-4k",
@@ -87,7 +289,55 @@
         "price": "$0.254/次",
         "tags": [],
         "note": "Banana 2代",
-        "api": "videos"
+        "api": "gemini"
+      },
+      {
+        "model": "nano-banana-pro",
+        "resolution": "-",
+        "price": "$0.354/次",
+        "tags": [],
+        "note": "Pro 版",
+        "api": "gemini"
+      },
+      {
+        "model": "nano-banana-pro-2k",
+        "resolution": "2K",
+        "price": "$0.354/次",
+        "tags": [],
+        "note": "Pro 2K",
+        "api": "gemini"
+      },
+      {
+        "model": "nano-banana-pro-4k",
+        "resolution": "4K",
+        "price": "$0.354/次",
+        "tags": [],
+        "note": "Pro 4K",
+        "api": "gemini"
+      },
+      {
+        "model": "nano-banana-pro-vip",
+        "resolution": "-",
+        "price": "$0.6/次",
+        "tags": [],
+        "note": "Pro VIP",
+        "api": "gemini"
+      },
+      {
+        "model": "nano-banana-pro-2k-vip",
+        "resolution": "2K",
+        "price": "$0.6/次",
+        "tags": [],
+        "note": "Pro VIP 2K",
+        "api": "gemini"
+      },
+      {
+        "model": "gpt-image-1.5-chat",
+        "resolution": "-",
+        "price": "未上架",
+        "tags": [],
+        "note": "OpenAI Chat 格式",
+        "api": "chat"
       },
       {
         "model": "gemini-3-pro-image-preview",
@@ -114,86 +364,418 @@
         "api": "chat"
       },
       {
-        "model": "nano-banana-pro",
-        "resolution": "-",
-        "price": "$0.354/次",
-        "tags": [],
-        "note": "Pro 版",
-        "api": "videos"
-      },
-      {
-        "model": "nano-banana-pro-2k",
-        "resolution": "2K",
-        "price": "$0.354/次",
-        "tags": [],
-        "note": "Pro 2K",
-        "api": "videos"
-      },
-      {
-        "model": "nano-banana-pro-4k",
-        "resolution": "4K",
-        "price": "$0.354/次",
-        "tags": [],
-        "note": "Pro 4K",
-        "api": "videos"
-      },
-      {
         "model": "nano-banana",
         "resolution": "-",
         "price": "$0.06/次",
         "tags": [],
         "note": "经典同步模型",
-        "api": "chat"
+        "api": "gemini"
       },
       {
-        "model": "gemini-3-pro-image-preview-vip",
+        "model": "bfl-flux-2-pro",
         "resolution": "-",
-        "price": "$0.80/次",
+        "price": "$0.21/次",
         "tags": [],
-        "note": "VIP 更稳定",
-        "api": "videos"
+        "note": "BFL Flux 2 Pro",
+        "api": "images"
       },
       {
-        "model": "gemini-3-pro-image-preview-2k-vip",
+        "model": "bfl-flux-2-max",
+        "resolution": "-",
+        "price": "$0.49/次",
+        "tags": [
+          "💰最贵"
+        ],
+        "note": "BFL Flux 2 Max 最高质量",
+        "api": "images"
+      },
+      {
+        "model": "bfl-flux-2-flex",
+        "resolution": "-",
+        "price": "$0.42/次",
+        "tags": [],
+        "note": "BFL Flux 2 Flex",
+        "api": "images"
+      },
+      {
+        "model": "bfl-flux-kontext-max",
+        "resolution": "-",
+        "price": "$0.24/次",
+        "tags": [],
+        "note": "BFL Flux Kontext Max",
+        "api": "images"
+      },
+      {
+        "model": "gemini-3.1-flash-image-preview-2k",
         "resolution": "2K",
-        "price": "$0.80/次",
+        "price": "$0.254/次",
         "tags": [],
-        "note": "VIP 更稳定",
-        "api": "videos"
+        "note": "Gemini 3.1 Flash 2K",
+        "api": "images"
       },
       {
-        "model": "gemini-3-pro-image-preview-4k-vip",
+        "model": "gemini-3.1-flash-image-preview-4k",
         "resolution": "4K",
-        "price": "$0.80/次",
+        "price": "$0.254/次",
         "tags": [],
-        "note": "VIP 更稳定",
-        "api": "videos"
+        "note": "Gemini 3.1 Flash 4K",
+        "api": "images"
       },
       {
-        "model": "nano-banana-pro-vip",
+        "model": "gemini-2.5-flash-image-preview",
         "resolution": "-",
-        "price": "$0.60/次",
+        "price": "$0.06/次",
         "tags": [],
-        "note": "Pro VIP",
-        "api": "videos"
+        "note": "Gemini 2.5 Flash 图片预览",
+        "api": "images"
       },
       {
-        "model": "nano-banana-pro-2k-vip",
-        "resolution": "2K",
-        "price": "$0.60/次",
+        "model": "gemini-2.5-flash-image-preview-hd",
+        "resolution": "HD",
+        "price": "$0.2/次",
         "tags": [],
-        "note": "Pro VIP 2K",
-        "api": "videos"
+        "note": "Gemini 2.5 Flash 图片预览 HD",
+        "api": "images"
+      },
+      {
+        "model": "gemini-2.5-flash-image-preview-vip",
+        "resolution": "-",
+        "price": "$0.08/次",
+        "tags": [],
+        "note": "Gemini 2.5 Flash 图片预览 VIP",
+        "api": "images"
+      },
+      {
+        "model": "gemini-2.5-flash-image-vip",
+        "resolution": "-",
+        "price": "$0.08/次",
+        "tags": [],
+        "note": "Gemini 2.5 Flash 图片 VIP",
+        "api": "images"
+      },
+      {
+        "model": "gemini-2.0-flash-exp-image-generation",
+        "resolution": "-",
+        "price": "Input: $2.5/$5/M tokens",
+        "tags": [],
+        "note": "Gemini 2.0 Flash 图片生成（按token）",
+        "api": "images"
+      },
+      {
+        "model": "imagen-3.0-generate-002",
+        "resolution": "-",
+        "price": "$0.06/次",
+        "tags": [],
+        "note": "Google Imagen 3.0",
+        "api": "images"
+      },
+      {
+        "model": "kling_image",
+        "resolution": "-",
+        "price": "点击查看价格详情",
+        "tags": [],
+        "note": "快影图片生成 v1最低",
+        "api": "images"
+      },
+      {
+        "model": "nano-banana-2",
+        "resolution": "-",
+        "price": "$0.254/次",
+        "tags": [],
+        "note": "与 gemini-3.1-flash-image-preview 同模型",
+        "api": "images"
+      },
+      {
+        "model": "dall-e-2",
+        "resolution": "-",
+        "price": "点击查看价格详情",
+        "tags": [],
+        "note": "DALL-E 2",
+        "api": "images"
+      },
+      {
+        "model": "dall-e-3",
+        "resolution": "-",
+        "price": "点击查看价格详情",
+        "tags": [],
+        "note": "DALL-E 3",
+        "api": "images"
+      },
+      {
+        "model": "gpt-4-dalle",
+        "resolution": "-",
+        "price": "点击查看价格详情",
+        "tags": [],
+        "note": "GPT-4 + DALL-E",
+        "api": "images"
+      },
+      {
+        "model": "gpt-4o-dalle",
+        "resolution": "-",
+        "price": "点击查看价格详情",
+        "tags": [],
+        "note": "GPT-4o + DALL-E",
+        "api": "images"
+      },
+      {
+        "model": "midjourney",
+        "resolution": "-",
+        "price": "Input: $60/M tokens",
+        "tags": [],
+        "note": "Midjourney",
+        "api": "images"
+      },
+      {
+        "model": "sd3.5-large",
+        "resolution": "-",
+        "price": "$0.01/次",
+        "tags": [],
+        "note": "Stable Diffusion 3.5 Large",
+        "api": "images"
+      },
+      {
+        "model": "sd3.5-large-turbo",
+        "resolution": "-",
+        "price": "$0.01/次",
+        "tags": [],
+        "note": "SD 3.5 Large Turbo",
+        "api": "images"
+      },
+      {
+        "model": "sd3.5-medium",
+        "resolution": "-",
+        "price": "Input: $60/M tokens",
+        "tags": [],
+        "note": "SD 3.5 Medium",
+        "api": "images"
+      },
+      {
+        "model": "stable-diffusion-xl-1024-v1-0",
+        "resolution": "1024px",
+        "price": "$0.01/次",
+        "tags": [],
+        "note": "SDXL 1024",
+        "api": "images"
+      },
+      {
+        "model": "japanese-stable-diffusion-xl",
+        "resolution": "-",
+        "price": "$0.01/次",
+        "tags": [],
+        "note": "日式 SDXL",
+        "api": "images"
+      },
+      {
+        "model": "ssd-1b",
+        "resolution": "-",
+        "price": "$0.01/次",
+        "tags": [],
+        "note": "SSD 1B",
+        "api": "images"
+      },
+      {
+        "model": "playground-v2-1024px-aesthetic",
+        "resolution": "1024px",
+        "price": "$0.01/次",
+        "tags": [],
+        "note": "Playground v2",
+        "api": "images"
+      },
+      {
+        "model": "playground-v2-5-1024px-aesthetic",
+        "resolution": "1024px",
+        "price": "$0.01/次",
+        "tags": [],
+        "note": "Playground v2.5",
+        "api": "images"
       }
     ]
   },
   "video": {
     "async": [
       {
+        "model": "sora-2",
+        "resolution": "-",
+        "price": "$0.1/次",
+        "tags": [],
+        "note": "Sora 2",
+        "api": "videos"
+      },
+      {
+        "model": "sora-2-pro",
+        "resolution": "-",
+        "price": "$4/次",
+        "tags": [],
+        "note": "Sora 2 Pro",
+        "api": "videos"
+      },
+      {
+        "model": "veo3.1",
+        "resolution": "-",
+        "price": "$1/次",
+        "tags": [],
+        "note": "Google 最新快速模式",
+        "api": "videos"
+      },
+      {
+        "model": "veo3.1-pro",
+        "resolution": "-",
+        "price": "$5/次",
+        "tags": [],
+        "note": "Google 最高质量",
+        "api": "videos"
+      },
+      {
+        "model": "veo3.1-components",
+        "resolution": "-",
+        "price": "$1/次",
+        "tags": [],
+        "note": "支持多参考图",
+        "api": "videos"
+      },
+      {
+        "model": "veo3.1-4k",
+        "resolution": "-",
+        "price": "$1/次",
+        "tags": [],
+        "note": "4K",
+        "api": "videos"
+      },
+      {
+        "model": "veo3.1-components-4k",
+        "resolution": "-",
+        "price": "$1/次",
+        "tags": [],
+        "note": "4K 多参考图",
+        "api": "videos"
+      },
+      {
+        "model": "veo3.1-pro-4k",
+        "resolution": "-",
+        "price": "$5/次",
+        "tags": [],
+        "note": "Pro 4K",
+        "api": "videos"
+      },
+      {
+        "model": "veo3",
+        "resolution": "-",
+        "price": "$1/次",
+        "tags": [],
+        "note": "Veo 3",
+        "api": "videos"
+      },
+      {
+        "model": "veo3-pro",
+        "resolution": "-",
+        "price": "$10/次",
+        "tags": [],
+        "note": "Veo 3 Pro",
+        "api": "videos"
+      },
+      {
+        "model": "veo3-fast",
+        "resolution": "-",
+        "price": "$1/次",
+        "tags": [],
+        "note": "Veo 3 快速",
+        "api": "videos"
+      },
+      {
+        "model": "veo3-frames",
+        "resolution": "-",
+        "price": "$1/次",
+        "tags": [],
+        "note": "帧提取",
+        "api": "videos"
+      },
+      {
+        "model": "veo3-fast-frames",
+        "resolution": "-",
+        "price": "$1/次",
+        "tags": [],
+        "note": "快速帧提取",
+        "api": "videos"
+      },
+      {
+        "model": "veo3-pro-frames",
+        "resolution": "-",
+        "price": "$10/次",
+        "tags": [],
+        "note": "Pro 帧提取",
+        "api": "videos"
+      },
+      {
+        "model": "veo2",
+        "resolution": "-",
+        "price": "$1/次",
+        "tags": [],
+        "note": "Veo 2",
+        "api": "videos"
+      },
+      {
+        "model": "veo2-fast",
+        "resolution": "-",
+        "price": "$1/次",
+        "tags": [],
+        "note": "Veo 2 快速",
+        "api": "videos"
+      },
+      {
+        "model": "veo2-pro",
+        "resolution": "-",
+        "price": "$10/次",
+        "tags": [],
+        "note": "Veo 2 Pro",
+        "api": "videos"
+      },
+      {
+        "model": "veo2-fast-components",
+        "resolution": "-",
+        "price": "$1/次",
+        "tags": [],
+        "note": "快速多参考图",
+        "api": "videos"
+      },
+      {
+        "model": "veo2-fast-frames",
+        "resolution": "-",
+        "price": "$1/次",
+        "tags": [],
+        "note": "快速帧提取",
+        "api": "videos"
+      },
+      {
+        "model": "kling_video",
+        "resolution": "-",
+        "price": "按token",
+        "tags": [],
+        "note": "可灵视频",
+        "api": "videos"
+      },
+      {
+        "model": "kling-video-o1",
+        "resolution": "-",
+        "price": "按token",
+        "tags": [],
+        "note": "可灵 O1",
+        "api": "videos"
+      },
+      {
+        "model": "kling-video-o1-edit",
+        "resolution": "-",
+        "price": "按token",
+        "tags": [],
+        "note": "可灵编辑",
+        "api": "videos"
+      },
+      {
         "model": "doubao-seedance-2-0_720p",
         "resolution": "720p",
         "price": "-",
-        "tags": ["🆕最新"],
+        "tags": [
+          "🆕最新"
+        ],
         "note": "Seedance 2.0",
         "api": "videos"
       },
@@ -201,7 +783,9 @@
         "model": "doubao-seedance-2-0_480p",
         "resolution": "480p",
         "price": "-",
-        "tags": ["🆕最新"],
+        "tags": [
+          "🆕最新"
+        ],
         "note": "Seedance 2.0",
         "api": "videos"
       },
@@ -217,7 +801,9 @@
         "model": "doubao-seedance-1-5-pro_720p",
         "resolution": "720p",
         "price": "$0.18/秒",
-        "tags": ["💰性价比"],
+        "tags": [
+          "💰性价比"
+        ],
         "note": "1.5 Pro",
         "api": "videos"
       },
@@ -225,7 +811,9 @@
         "model": "doubao-seedance-1-5-pro_480p",
         "resolution": "480p",
         "price": "$0.09/秒",
-        "tags": ["⭐最便宜"],
+        "tags": [
+          "⭐最便宜"
+        ],
         "note": "1.5 Pro",
         "api": "videos"
       },
@@ -273,7 +861,9 @@
         "model": "doubao-seedance-1-0-pro-fast_480p",
         "resolution": "480p",
         "price": "$0.07/秒",
-        "tags": ["⭐最便宜"],
+        "tags": [
+          "⭐最便宜"
+        ],
         "note": "1.0 Pro Fast",
         "api": "videos"
       },
@@ -289,7 +879,9 @@
         "model": "doubao-seedance-1-0-lite_720p",
         "resolution": "720p",
         "price": "$0.17/秒",
-        "tags": ["💰性价比"],
+        "tags": [
+          "💰性价比"
+        ],
         "note": "1.0 Lite",
         "api": "videos"
       },
@@ -297,7 +889,9 @@
         "model": "doubao-seedance-1-0-lite_480p",
         "resolution": "480p",
         "price": "$0.07/秒",
-        "tags": ["⭐最便宜"],
+        "tags": [
+          "⭐最便宜"
+        ],
         "note": "1.0 Lite",
         "api": "videos"
       },
@@ -316,18 +910,181 @@
         "tags": [],
         "note": "1.5 Pro 原价",
         "api": "videos"
+      },
+      {
+        "model": "sora-1:1-480p-5s",
+        "resolution": "1:1 480p",
+        "price": "$2/次",
+        "tags": [],
+        "note": "Sora 1 5秒",
+        "api": "videos"
+      },
+      {
+        "model": "sora-1:1-480p-10s",
+        "resolution": "1:1 480p",
+        "price": "$4/次",
+        "tags": [],
+        "note": "Sora 1 10秒",
+        "api": "videos"
+      },
+      {
+        "model": "sora-1:1-720p-5s",
+        "resolution": "1:1 720p",
+        "price": "$3/次",
+        "tags": [],
+        "note": "Sora 1 720p 5秒",
+        "api": "videos"
+      },
+      {
+        "model": "sora-16:9-480p-5s",
+        "resolution": "16:9 480p",
+        "price": "$2.5/次",
+        "tags": [],
+        "note": "Sora 1 16:9 5秒",
+        "api": "videos"
+      },
+      {
+        "model": "sora-16:9-480p-10s",
+        "resolution": "16:9 480p",
+        "price": "$5/次",
+        "tags": [],
+        "note": "Sora 1 16:9 10秒",
+        "api": "videos"
+      },
+      {
+        "model": "sora-16:9-720p-5s",
+        "resolution": "16:9 720p",
+        "price": "$6/次",
+        "tags": [
+          "💰最贵"
+        ],
+        "note": "Sora 1 720p 5秒",
+        "api": "videos"
+      },
+      {
+        "model": "sora-9:16-480p-5s",
+        "resolution": "9:16 480p",
+        "price": "$2.5/次",
+        "tags": [],
+        "note": "Sora 1 竖版 5秒",
+        "api": "videos"
+      },
+      {
+        "model": "sora-9:16-480p-10",
+        "resolution": "9:16 480p",
+        "price": "$5/次",
+        "tags": [],
+        "note": "Sora 1 竖版 10秒（推断价格）",
+        "api": "videos"
+      },
+      {
+        "model": "sora-9:16-720p-5s",
+        "resolution": "9:16 720p",
+        "price": "$6/次",
+        "tags": [],
+        "note": "Sora 1 竖版 720p 5秒",
+        "api": "videos"
+      },
+      {
+        "model": "sora-2-4s",
+        "resolution": "-",
+        "price": "$1.2/次",
+        "tags": [
+          "⭐最便宜"
+        ],
+        "note": "Sora 2 4秒",
+        "api": "videos"
+      },
+      {
+        "model": "sora-2-8s",
+        "resolution": "-",
+        "price": "$2.4/次",
+        "tags": [],
+        "note": "Sora 2 8秒",
+        "api": "videos"
+      },
+      {
+        "model": "sora-2-12s",
+        "resolution": "-",
+        "price": "$3.6/次",
+        "tags": [],
+        "note": "Sora 2 12秒",
+        "api": "videos"
+      },
+      {
+        "model": "sora-2-15s",
+        "resolution": "-",
+        "price": "$1.56/次",
+        "tags": [],
+        "note": "Sora 2 15秒",
+        "api": "videos"
+      },
+      {
+        "model": "sora-2-character",
+        "resolution": "-",
+        "price": "$0.02/次",
+        "tags": [
+          "⭐最便宜"
+        ],
+        "note": "Sora 2 角色一致性",
+        "api": "videos"
+      },
+      {
+        "model": "sora-2-pro-character",
+        "resolution": "-",
+        "price": "$0.01/次",
+        "tags": [
+          "⭐最便宜"
+        ],
+        "note": "Sora 2 Pro 角色一致性",
+        "api": "videos"
       }
     ]
   },
   "sites": [
-    {"url": "https://api.ourzhishi.top/v1", "name": "广州"},
-    {"url": "https://apius.tu-zi.com/v1", "name": "CDN备用1"},
-    {"url": "https://apicdn.tu-zi.com/v1", "name": "CDN备用2"},
-    {"url": "https://api.tu-zi.com/v1", "name": "主站点"},
-    {"url": "https://api.sydney-ai.com/v1", "name": "美国"}
+    {
+      "url": "https://api.ourzhishi.top/v1",
+      "name": "广州"
+    },
+    {
+      "url": "https://apius.tu-zi.com/v1",
+      "name": "CDN备用1"
+    },
+    {
+      "url": "https://apicdn.tu-zi.com/v1",
+      "name": "CDN备用2"
+    },
+    {
+      "url": "https://api.tu-zi.com/v1",
+      "name": "主站点"
+    },
+    {
+      "url": "https://api.sydney-ai.com/v1",
+      "name": "美国"
+    }
   ],
   "sizes": {
-    "image": ["1:1", "2:3", "3:2", "3:4", "4:3", "4:5", "5:4", "9:16", "16:9", "21:9"],
-    "video": ["16:9", "9:16", "4:3", "3:4", "1:1", "21:9", "keep_ratio", "adaptive"]
+    "image": [
+      "1:1",
+      "2:3",
+      "3:2",
+      "3:4",
+      "4:3",
+      "4:5",
+      "5:4",
+      "9:16",
+      "16:9",
+      "21:9"
+    ],
+    "video": [
+      "16:9",
+      "9:16",
+      "4:3",
+      "3:4",
+      "1:1",
+      "21:9",
+      "keep_ratio",
+      "adaptive"
+    ]
   }
 }

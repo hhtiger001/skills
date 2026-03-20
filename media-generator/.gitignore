@@ -16,3 +16,8 @@ scripts/reference_images/*.jpg
 scripts/reference_images/*.png
 __pycache__/
 scripts/.idea/
+
+# Credentials
+scripts/.tuzi_api_key
+scripts/.tuzi_user_token
+scripts/.site_cache.json
